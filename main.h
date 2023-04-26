@@ -5,5 +5,6 @@
 
 int _printf(const char *format, ...);
 void _putchar(char c);
+void print_number(int n);
 
 #endif

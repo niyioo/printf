@@ -5,7 +5,6 @@
  * @format: Format string containing directives.
  * Return: The number of characters printed (excluding the null byte).
  */
-
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -39,6 +38,11 @@ int _printf(const char *format, ...)
 					_putchar('%');
 					count++;
 					break;
+				case 'd':
+				case 'i':
+					print_number(va_arg(args, int));
+					count++;
+					break;
 				default:
 					break;
 			}
@@ -63,4 +67,30 @@ int _printf(const char *format, ...)
 void _putchar(char c)
 {
 	putchar(c);
+}
+
+/**
+ * print_number - Prints an integer.
+ * @n: The integer to print.
+ */
+void print_number(int n)
+{
+	unsigned int n_abs;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n_abs = -n;
+	}
+	else
+	{
+		n_abs = n;
+	}
+
+	if (n_abs / 10)
+	{
+		print_number(n_abs / 10);
+	}
+
+	_putchar((n_abs % 10) + '0');
 }
