@@ -20,10 +20,10 @@
 #define S_SHORT 1
 
 /**
- * struct fmt - Struct op
+ * struct fmt - struct
  *
- * @fmt: The format.
- * @fn: The function associated.
+ * @fmt: format
+ * @fn: function
  */
 struct fmt
 {
@@ -33,10 +33,10 @@ struct fmt
 
 
 /**
- * typedef struct fmt fmt_t - Struct op
+ * typedef struct fmt fmt_t - struct
  *
- * @fmt: The format.
- * @fm_t: The function associated.
+ * @fmt: format
+ * @fm_t: function
  */
 typedef struct fmt fmt_t;
 
