@@ -20,7 +20,6 @@ int is_printable(char c)
  * @buffer: Array of chars
  * @i: Index
  * @ascii_code: ASCII CODE
-
  * Return: 3
  */
 int append_hexa_code(char ascii_code, char buffer[], int i)
